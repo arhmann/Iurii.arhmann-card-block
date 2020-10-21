@@ -1,0 +1,30 @@
+
+/// @type List
+$text-font-stack: 'Merriweather', 'Arial' !default;
+
+
+
+/// Colors
+$color-btn: #382E2B !default;
+$color-btn-hover: #5B3A32 !default;
+$text-color: #343030 !default;
+$color-bkg: #f6f3f3 !default;
+$color-bkg-ftr: #ECEAEA !default;
+
+
+
+/// Breakpoints map
+$desktop-max: 1439px !default;
+$desktop-min: 1279px !default;
+$desktop: 991px !default;
+$tablet: 767px !default;
+$mobile: 374px !default;
+
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: 'assets/' !default;
+
+$easeInOutSine: cubic-bezier(0.785, 0.135, 0.15, 0.86);

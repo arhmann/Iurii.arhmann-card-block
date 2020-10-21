@@ -1,0 +1,56 @@
+.main {
+
+    &__content{
+        margin-bottom: 320px;
+    }
+
+    &__title {
+        margin: 45px 0 0;
+    }
+
+    &__cards{
+        margin: 40px auto 0;
+        flex-wrap: nowrap;
+    }
+
+    .card{
+        border: 1px solid #e1e1e1;
+        margin-right: 32px;
+        width: 280px;
+
+        &__img{
+            width: 100%;
+        }
+
+        .card--pos{
+            margin-top: 13px;
+        }
+
+        &__title{
+            font-size: 18px;
+            text-align: center;
+            width: 220px;
+            margin: 20px auto;
+        }
+
+        &__buy{
+            justify-content: center;
+            margin-bottom: 10px;
+
+            .card__price-top{
+                align-items: center;
+                color: #A0A0A0;
+                text-decoration: line-through;
+            }
+        }
+
+        &__prices{
+            flex-direction: column;
+            margin-right: 20px;
+        }
+
+        
+    }
+
+
+}

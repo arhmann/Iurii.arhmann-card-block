@@ -1,0 +1,50 @@
+body {
+  color: $text-color;
+  font-family: $text-font-stack;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.67;
+}
+button,
+optgroup,
+select {
+  font-family: $text-font-stack;
+  font-size: 18px;
+}
+input,
+textarea {
+  font-family: $text-font-stack;
+  font-size: 24px;
+}
+
+.h1 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36px;
+}
+
+.h2 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+}
+
+.h3,
+.h4 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.h5 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.h6 {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+
+}

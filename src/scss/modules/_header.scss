@@ -1,0 +1,31 @@
+.header {
+  padding: 20px 0 20px;
+  border-bottom: 1px solid #e1e1e1;
+
+  &__form {
+    position: relative;
+  }
+  &__input {
+    padding-left: 10px;
+    padding-right: 130px;
+    font-size: 14px;
+    color: #9f9f9f;
+  }
+
+  &__btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  &__menu {
+    margin: 10px auto 0 40px;
+    width: 700px;
+
+    &-item {
+      margin-right: 48px;
+      font-size: 14px;
+    }
+
+  }
+}

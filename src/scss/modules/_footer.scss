@@ -1,0 +1,29 @@
+.footer {
+  background-color: $color-bkg-ftr;
+
+  .container {
+    padding: 20px 0 20px;
+
+    .footer__contact {
+      width: 440px;
+      margin-top: 11px;
+
+      .footer__num,
+      .footer__adress {
+        font-size: 14px;
+      }
+
+      .footer__num{
+          margin-right: 51px;
+      }
+
+      .footer__tel{
+          margin: 5px 5px 0 0;
+      }
+
+      .footer__point-map{
+        margin: 5px 6px 0 0;
+      }
+    }
+  }
+}
