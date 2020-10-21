@@ -1,41 +1,29 @@
-'use strict';
+"use strict";
+//const axios = require("axios");
+let buttons = document.querySelectorAll(".btn--buy");
+//const servResponse = document.querySelector(".response");
+let xhr = new XMLHttpRequest();
 
-// Загрузка библиотек
-// require('slick-carousel');
-
-
-(function($) {
-  const App = {
-    init: function() {
-      console.time('Time');
-      const that = this;
-      that.test();
-      that.resize(that);
-      console.timeEnd('Time');
-    },
-    test: function() {
-      const $btn = $('.test');
-      if ($btn.length) {
-        $btn.on('click', function() {
-          const self = $(this);
-          console.log('test');
-        })
-      }
-    },
-
-    resize: function (that) {
-      let timer = 0;
-      $(window).on('resize', function () {
-        clearTimeout(timer);
-        timer = setTimeout(function () {
-
-          console.log('resize');
-        }, 250);
-      });
-    },
+const getAJAX = () => {
+  xhr.open("GET", "https://reqres.in/api/products/3", true);
+  xhr.send();
+  xhr.onreadystatechange = function () {
+    if (this.readyState === 4 && this.status === 200) {
+      sendXHR(this.responseText);
+    }
   };
-  App.init();
+};
 
-})(jQuery);
+buttons.forEach(el => 
+    el.addEventListener("click", (event) => {
+        event.preventDefault();
+        getAJAX();
+      })
+    );
+  
 
 
+function sendXHR(data) {
+  //just for test!
+  console.log(data);
+}
