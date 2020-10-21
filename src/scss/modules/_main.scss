@@ -30,14 +30,14 @@
             font-size: 18px;
             text-align: center;
             width: 220px;
-            margin: 20px auto;
+            margin: 18px auto 16px 10px;
         }
 
         &__buy{
             justify-content: center;
             margin-bottom: 10px;
 
-            .card__price-top{
+            .card__through{
                 align-items: center;
                 color: #A0A0A0;
                 text-decoration: line-through;
@@ -49,8 +49,18 @@
             margin-right: 20px;
         }
 
+        .card__status{
+            font-size: 16px;
+            margin-right: 26px;
+        }
+
+
         
     }
 
 
+}
+
+.card__status-off{
+    opacity: 0.5;
 }
