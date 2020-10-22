@@ -10,22 +10,12 @@ window.onload = () => {
 
     buttons.forEach((btn) => {
       if (localStorage.getItem("ID") == '337848071') {
-        //btn.textContent = "В корзине.";
+       // btn.textContent = "В корзине.";
         //btn.style.display = "inline";
       }
     });
 };
 
-btnClose.forEach((btnclose) => {
-  btnclose.addEventListener("click", (event) => {
-    event.preventDefault();
-    
-    buttons.forEach((btn) => {
-      btn.textContent = "Купить";
-      arrayBTN = [];
-    });
-  });
-});
 
 const setAJAX = () => {
   xhr.open("GET", "https://reqres.in/api/products/3", true);
@@ -56,3 +46,14 @@ buttons.forEach((btn) =>
     setAJAX();
   })
 );
+
+btnClose.forEach((btnclose) => {
+  btnclose.addEventListener("click", (event) => {
+    event.preventDefault();
+    
+    buttons.forEach((btn) => {
+      btn.textContent = "Купить";
+      arrayBTN = [];
+    });
+  });
+})
