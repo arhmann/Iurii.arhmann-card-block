@@ -17,9 +17,11 @@
         border: 1px solid #e1e1e1;
         margin-right: 32px;
         width: 280px;
+        position: relative;
 
         &__img{
             width: 100%;
+           
         }
 
         .card--pos{

@@ -2,19 +2,30 @@
 //const axios = require("axios");
 let buttons = document.querySelectorAll(".btn--buy");
 let xhr = new XMLHttpRequest();
+let btnClose = document.querySelectorAll(".close");
 let arrayBTN = [];
-/*
+let btnId = 0;
+
 window.onload = () => {
+
     buttons.forEach((btn) => {
-      if (localStorage.getItem() == localStorage.getItem("userID")) {
-        btn.textContent = "В корзине.";
-        btn.style.display = "inline";
-        console.log(localValue)
-          JSON.stringify(arrayBTN)
+      if (localStorage.getItem("ID") == '337848071') {
+        //btn.textContent = "В корзине.";
+        //btn.style.display = "inline";
       }
     });
 };
-*/
+
+btnClose.forEach((btnclose) => {
+  btnclose.addEventListener("click", (event) => {
+    event.preventDefault();
+    
+    buttons.forEach((btn) => {
+      btn.textContent = "Купить";
+      arrayBTN = [];
+    });
+  });
+});
 
 const setAJAX = () => {
   xhr.open("GET", "https://reqres.in/api/products/3", true);
@@ -29,24 +40,19 @@ const setAJAX = () => {
 buttons.forEach((btn) =>
   btn.addEventListener("click", (event) => {
     event.preventDefault();
-    localStorage.setItem("userID", "337848071");
+    localStorage.setItem("ID", "337848071");
 
     btn.classList.toggle("loading");
-    
-    arrayBTN.push(btn.dataset.dataid);
-    console.log(arrayBTN);
+
+    arrayBTN.push(btn.getAttribute('dataid'));
+    btnId = btn.getAttribute('dataid');
 
     setTimeout(function () {
       if (xhr.readyState === 4 && xhr.status === 200) {
         btn.classList.toggle("loading");
         btn.textContent = "В корзине.";
-        
       }
     }, 1000);
     setAJAX();
-    
-    
   })
 );
-
-
