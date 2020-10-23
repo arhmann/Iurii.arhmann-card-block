@@ -7,7 +7,6 @@ let arrayBTN = [];
 let ids = localStorage.getItem("ids");
 
 window.onload = () => {
-  //localStorage.clear();
   let parseIds = JSON.parse(localStorage.getItem("ids"));
 
     for (let i = 0; i < parseIds.length; i++) {
@@ -51,7 +50,8 @@ btnClose.forEach((btnclose) => {
 
     buttons.forEach((btn) => {
       btn.textContent = "Купить";
-      arrayBTN = [];
+       localStorage.clear(); 
+       arrayBTN = [];
     });
   });
 });
